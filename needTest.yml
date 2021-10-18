@@ -1,0 +1,13 @@
+name: Test need command
+
+on: 
+  workflow_dispatch: {}
+
+jobs:
+  sleep:
+    runs-on: [ self-hosted, barndoor-runner ]
+    steps:
+     - name: Sleep for 30 seconds
+       run: sleep 30s
+       shell: bash
+     - run: echo "done"
