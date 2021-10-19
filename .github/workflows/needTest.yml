@@ -5,7 +5,7 @@ on:
 
 jobs:
   sleep:
-    runs-on: [ self-hosted, barndoor-runner ]
+    runs-on: ubuntu-latest
     steps:
      - name: Sleep for 30 seconds
        run: sleep 30s
