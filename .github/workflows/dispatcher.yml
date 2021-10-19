@@ -1,0 +1,16 @@
+on: 
+  workflow_dispatch: {}
+
+jobs:
+  publish_to_dev:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Trigger other workflow
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          # Name or ID of workflow to run
+          workflow: "Test need command"
+          token: ${{ secrets.WORKFLOW_KEY }}
+          ref: main
+          inputs: { "myInput": "foobar" }
