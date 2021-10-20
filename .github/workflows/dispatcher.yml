@@ -13,4 +13,3 @@ jobs:
           workflow: "Test need command"
           token: ${{ secrets.WORKFLOW_KEY }}
           ref: main
-          inputs: '{ "myInput": "foobar" }'
