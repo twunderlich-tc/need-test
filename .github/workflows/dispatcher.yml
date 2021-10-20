@@ -15,3 +15,5 @@ jobs:
           github_token: ${{ secrets.WORKFLOW_KEY }}
           repo: need-test
           ref: main
+      - name: run next job
+        run: sleep 10s
