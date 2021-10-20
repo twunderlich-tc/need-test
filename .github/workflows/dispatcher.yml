@@ -15,9 +15,6 @@ jobs:
           github_token: ${{ secrets.WORKFLOW_KEY }}
           repo: need-test
           ref: main
-  run-sleep:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
       - name: run next job
-        run: sleep 5s
+        run: sleep 5s |
+            echo "done"
