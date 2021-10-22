@@ -18,7 +18,6 @@ jobs:
           workflow_file_name: needTest.yml
           github_token: ${{ secrets.WORKFLOW_KEY }}
           repo: need-test
-          inputs: '{"input": "hello world"}'
           ref: main
       - name: run next job
         run: sleep 5s |
