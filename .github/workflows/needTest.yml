@@ -18,5 +18,5 @@ jobs:
      - name: Sleep for 30 seconds
        run: sleep 30s
        shell: bash
-     - run: echo ${{ github.event.inputs.input }} 
+     - run: bash emptyfile.sh ${{ github.event.inputs.input }} 
      - run: echo "done"
