@@ -1,7 +1,12 @@
 name: Test need command
 
 on: 
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      input:
+        description: 'Directory to deploy'     
+        required: false
+        default: ""
 
 jobs:
   sleep:
@@ -10,4 +15,5 @@ jobs:
      - name: Sleep for 30 seconds
        run: sleep 30s
        shell: bash
+     - run: echo ${{ github.event.inputs.input }} 
      - run: echo "done"
