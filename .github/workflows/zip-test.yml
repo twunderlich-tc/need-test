@@ -1,0 +1,16 @@
+name: zip test
+
+on:
+
+  workflow_dispatch: {}
+  
+jobs:
+  test zip: 
+    runs-on: ubuntu-latest 
+   
+    steps: 
+      - uses : actions/checkout@v2
+      - name: bundle
+        run: |
+          zip folder.zip emptyfile.sh
+          
