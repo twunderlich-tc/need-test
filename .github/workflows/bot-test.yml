@@ -13,6 +13,6 @@ jobs:
         with:
           slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_TOKEN }}
           slack-channel: C02KCUP1TPZ
-          slack-text: Hello! Test Successful in "${{ github.repository }}" 🤓
+          slack-text: Hello! Test from slack branch Successful in "${{ github.repository }}" 🤓
       - name: Result from "Send Message"
         run: echo "The result was ${{ steps.notify.outputs.slack-result }}"
