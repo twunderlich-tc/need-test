@@ -6,6 +6,7 @@ on:
         directory:
           description: 'Directory to deploy'     
           required: false
+          default: "none"
 
 jobs:
   slack-notifications:
