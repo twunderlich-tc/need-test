@@ -1,18 +1,26 @@
 name: slack-notification
 
 on: 
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+        directory:
+          description: 'Directory to deploy'     
+          required: false
+          default: ""
 
 jobs:
   slack-notifications:
     runs-on: ubuntu-latest
     name: Sends a message to Slack when a push, a pull request or an issue is made
     steps:
-      - name: Send message to Slack API
-        uses: archive/github-actions-slack@v2.0.0
-        with:
-          slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_TOKEN }}
-          slack-channel: C02KCUP1TPZ
-          slack-text: Hello! Test Successful in "${{ github.repository }}" 🤓
-      - name: Result from "Send Message"
-        run: echo "The result was ${{ steps.notify.outputs.slack-result }}"
+#       - name: Send message to Slack API
+#         uses: archive/github-actions-slack@v2.0.0
+#         with:
+#           slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_TOKEN }}
+#           slack-channel: C02KCUP1TPZ
+#           slack-text: Hello! Test Successful in "${{ github.repository }}" 🤓
+#       - name: Result from "Send Message"
+#         run: echo "The result was ${{ steps.notify.outputs.slack-result }}"
+        - name: Do deploy for develop
+          run: bash testScript.sh develop ${{ github.event.inputs.directory }}
+          
