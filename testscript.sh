@@ -10,7 +10,7 @@ DIRECTORY="$2"
 DEPLOYMENT_TARGETS_FILE="deploy_targets.${BRANCH}.toml"
 
 # if no directory is specified, run deploy as normal
-if [ -z "$DIRECTORY" ]; then
+if [[ $DIRECTORY == "none" ]]; then
     echo no input
     # for DEPLOYMENT_DIR in $(find . -name ${DEPLOYMENT_TARGETS_FILE}  | xargs -n 1 dirname); do
     #     docker run \
