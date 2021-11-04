@@ -2,7 +2,7 @@ set -eu
 set -o xtrace
 
 BRANCH="$1"
-DIRECTORY="$2"
+DIRECTORY=${2:-"none"}
 
 #git -C barndoor_code checkout $BRANCH --force
 
