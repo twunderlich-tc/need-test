@@ -6,11 +6,10 @@ on:
         directory:
           description: 'Directory to deploy'     
           required: false
-          default: ""
 
 jobs:
   slack-notifications:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     name: Sends a message to Slack when a push, a pull request or an issue is made
     steps:
 #       - name: Send message to Slack API
