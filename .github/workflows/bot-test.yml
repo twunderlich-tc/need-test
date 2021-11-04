@@ -21,6 +21,7 @@ jobs:
 #           slack-text: Hello! Test Successful in "${{ github.repository }}" 🤓
 #       - name: Result from "Send Message"
 #         run: echo "The result was ${{ steps.notify.outputs.slack-result }}"
+        - uses: actions/checkout@v2
         - name: Do deploy for develop
           run: bash testscript.sh develop ${{ github.event.inputs.directory }}
           
