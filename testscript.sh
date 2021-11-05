@@ -29,6 +29,7 @@ if [[ $DIRECTORY == "none" ]]; then
 # deploy only the target directory
 else
 echo input
+echo "$DIRECTORY"
     # docker run \
     #     -v $(pwd)/${DIRECTORY}:/config \
     #     -v $(pwd)/barndoor_code:/barndoor.git \
