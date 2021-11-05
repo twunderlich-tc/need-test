@@ -18,6 +18,7 @@ jobs:
           workflow_file_name: bot-test.yml
           github_token: ${{ secrets.WORKFLOW_KEY }}
           repo: need-test
+          inputs: '{"directory": "./barndoor-testing"}'
           ref: main
       - name: run next job
         run: sleep 5s |
