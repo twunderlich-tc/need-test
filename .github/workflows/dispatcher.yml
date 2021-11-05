@@ -15,7 +15,7 @@ jobs:
         with:
           # Name or ID of workflow to run
           owner: twunderlich-tc
-          workflow_file_name: needTest.yml
+          workflow_file_name: bot-test.yml
           github_token: ${{ secrets.WORKFLOW_KEY }}
           repo: need-test
           ref: main
