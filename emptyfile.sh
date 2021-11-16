@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-$GITHUB_TOKEN=$1
+GITHUB_TOKEN=$1
 
 curl -s \
     -H "Accept: application/vnd.github.v3+json" \
