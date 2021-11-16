@@ -7,4 +7,4 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Trigger other workflow
-        run: bash emptyFile.sh ${{ secrets.BARNDOOR_GITHUB_TOKEN }}
+        run: bash emptyfile.sh ${{ secrets.BARNDOOR_GITHUB_TOKEN }}
