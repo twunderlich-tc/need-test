@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 $GITHUB_TOKEN=$1
 
 curl -s \
