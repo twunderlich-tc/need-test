@@ -1,3 +1,5 @@
+$GITHUB_TOKEN=$1
+
 curl -s \
     -H "Accept: application/vnd.github.v3+json" \
     --header "authorization: Bearer $GITHUB_TOKEN" \
