@@ -5,4 +5,4 @@ GITHUB_TOKEN=$1
 curl -s \
     -H "Accept: application/vnd.github.v3+json" \
     --header "authorization: Bearer $GITHUB_TOKEN" \
-    --url "https://api.github.com/repos/twunderlich-tc/need-test/pull/7"
+    --url "https://api.github.com/repos/twunderlich-tc/need-test/pulls/7"
