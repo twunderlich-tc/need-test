@@ -7,4 +7,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Trigger other workflow
-        run: bash emptyfile.sh ${{ secrets.WORKFLOW_KEY }}
+        run: exit 1 # bash emptyfile.sh ${{ secrets.WORKFLOW_KEY }}
+      - name: check failure
+        if: ${{ failure() }}
+        run: |
+          echo "failure"
