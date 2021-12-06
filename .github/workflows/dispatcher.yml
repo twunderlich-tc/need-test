@@ -7,9 +7,10 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Trigger other workflow
+        id: trigger
         run: exit 1 # bash emptyfile.sh ${{ secrets.WORKFLOW_KEY }}
         continue-on-error: true
       - name: check failure
-        if: ${{ failure() }}
+        if: steps.trigger.outcome != 'success'
         run: |
           echo "failure"
